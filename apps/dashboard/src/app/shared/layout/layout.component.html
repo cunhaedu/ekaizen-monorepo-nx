@@ -1,0 +1,15 @@
+<nb-layout>
+  <nb-layout-header fixed>
+    <button nbButton status="success" size="tiny" (click)="toggle()">Toggle</button>
+  </nb-layout-header>
+
+  <nb-sidebar responsive left containerFixed class='side-bar' tag="left">
+    <nb-menu [items]="menuItems"></nb-menu>
+  </nb-sidebar>
+
+  <nb-layout-column class="mt-16">
+    <body style="margin-top: -0.3vw">
+      <router-outlet></router-outlet>
+    </body>
+  </nb-layout-column>
+</nb-layout>
