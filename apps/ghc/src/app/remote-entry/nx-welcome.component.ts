@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'ek-frontend-nx-welcome',
+  selector: 'ghc-nx-welcome',
   template: `
     <div>
       <h1>Bem vindo ao GHC!</h1>

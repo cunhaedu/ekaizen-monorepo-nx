@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {NbIconLibraries, NbMenuItem, NbSidebarService} from "@nebular/theme";
 
 @Component({
-  selector: 'ek-frontend-layout',
+  selector: 'dashboard-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
   providers: [NbSidebarService],
