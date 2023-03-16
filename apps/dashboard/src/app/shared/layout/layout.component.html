@@ -1,6 +1,11 @@
 <nb-layout>
-  <nb-layout-header fixed>
-    <button nbButton status="success" size="tiny" (click)="toggle()">Toggle</button>
+  <nb-layout-header fixed class="header">
+    <div style="cursor: pointer" (click)="toggle()">
+      <nb-icon icon="bars" pack="fas"></nb-icon>
+    </div>
+    <div>
+      <button nbButton outline status="danger" (click)="logout()">Logout</button>
+    </div>
   </nb-layout-header>
 
   <nb-sidebar responsive left containerFixed class='side-bar' tag="left">

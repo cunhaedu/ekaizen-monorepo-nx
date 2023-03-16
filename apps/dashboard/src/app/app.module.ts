@@ -7,16 +7,27 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { LayoutComponent } from './shared/layout/layout.component';
 import {
+  NbActionsModule,
   NbButtonModule,
-  NbCardModule,
-  NbLayoutModule, NbMenuModule,
+  NbCardModule, NbIconModule, NbInputModule,
+  NbLayoutModule,
+  NbMenuModule,
   NbSidebarModule,
   NbThemeModule,
-  NbThemeService
-} from "@nebular/theme";
+  NbThemeService,
+} from '@nebular/theme';
+import { IndexComponent } from './index/index.component';
+import { LoginComponent } from './login/login.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
-  declarations: [AppComponent, NxWelcomeComponent, LayoutComponent],
+  declarations: [
+    AppComponent,
+    NxWelcomeComponent,
+    LayoutComponent,
+    IndexComponent,
+    LoginComponent,
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes, {initialNavigation: 'enabledBlocking'}),
@@ -26,6 +37,10 @@ import {
     NbButtonModule,
     NbSidebarModule,
     NbCardModule,
+    NbActionsModule,
+    NbIconModule,
+    NbInputModule,
+    ReactiveFormsModule,
   ],
   providers: [NbThemeService],
   bootstrap: [AppComponent],
