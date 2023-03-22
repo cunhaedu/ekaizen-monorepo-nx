@@ -1,0 +1,19 @@
+@use 'themes' as *;
+@use '@nebular/theme/styles/globals' as *;
+@import "globals/nebular";
+
+@include nb-install() {
+  @include nb-theme-global();
+}
+
+.svg-inline--fa {
+  margin: auto !important;
+}
+
+.menu-title {
+  padding-left: 5px;
+}
+
+.context-menu {
+  background-color: #393839;
+}

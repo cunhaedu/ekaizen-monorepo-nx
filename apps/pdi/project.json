@@ -6,6 +6,9 @@
   "prefix": "pdi",
   "targets": {
     "build": {
+      "stylePreprocessorOptions": {
+        "includePaths": [ "libs/ui/src/lib/styles" ]
+      },
       "executor": "@nrwl/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {

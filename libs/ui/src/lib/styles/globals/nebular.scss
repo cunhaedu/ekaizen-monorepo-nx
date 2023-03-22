@@ -1,0 +1,73 @@
+nb-sidebar,
+nb-sidebar>div.main-container {
+  will-change: transition;
+  transition: width 300ms cubic-bezier(0.2, 0, 0, 1) 0s;
+  top: 3.4rem !important;
+}
+
+.nb-theme-ekaizen nb-menu .menu-item>.menu-items {
+  padding-left: 0.75rem !important;
+}
+
+//.nb-theme-ekaizen nb-layout-header nav {
+//  box-shadow: none;
+//}
+
+nb-sidebar .scrollable {
+  padding-top: 0 !important;
+}
+
+.nb-theme-ekaizen nb-tabset .tab.active .tab-link {
+  color: #d14c5e !important;
+  outline: none !important;
+  border: none !important;
+}
+
+nb-sidebar .main-container nb-menu ul li a .menu-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 0;
+}
+
+ng2-smart-table {
+  font-size: 4.5pt !important;
+
+  ng2-smart-table .ng-star-inserted {
+    font-size: 9pt !important;
+  }
+
+  ng2-smart-table .ng2-smart-th {
+    padding: 8px !important;
+    text-align: center;
+    line-height: 1px !important;
+  }
+
+  ng2-smart-table td {
+    padding: 8px !important;
+  }
+
+  ng2-smart-table .ng2-smart-page-link {
+    padding: 8px 12px !important;
+    text-align: center;
+  }
+
+  .ng2-smart-actions.ng2-smart-action-multiple-select input,
+  th input {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+  }
+}
+
+.alert {
+  line-height: 1.5;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+nb-toggle {
+  label {
+    margin: 0;
+  }
+}

@@ -1,15 +1,24 @@
 <nb-layout>
   <nb-layout-header fixed class="header">
-    <div style="cursor: pointer" (click)="toggle()">
+    <div style="cursor: pointer" (click)="toggleSidebar()">
       <nb-icon icon="bars" pack="fas"></nb-icon>
     </div>
     <div>
       <button nbButton outline status="danger" (click)="logout()">Logout</button>
+
+      <button
+        outline
+        nbButton
+        nbContextMenuTag="context-menu"
+        [nbContextMenu]="headerContextMenuItems"
+      >
+        Usuário logado
+      </button>
     </div>
   </nb-layout-header>
 
-  <nb-sidebar responsive left containerFixed class='side-bar' tag="left">
-    <nb-menu [items]="menuItems"></nb-menu>
+  <nb-sidebar state="compacted" left tag="left"  class='side-bar'>
+    <nb-menu autoCollapse="false" [items]="menuItems"></nb-menu>
   </nb-sidebar>
 
   <nb-layout-column class="mt-16">

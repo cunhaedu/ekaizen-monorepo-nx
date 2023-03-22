@@ -9,16 +9,17 @@ import { LayoutComponent } from './shared/layout/layout.component';
 import {
   NbActionsModule,
   NbButtonModule,
-  NbCardModule, NbIconModule, NbInputModule,
+  NbCardModule, NbContextMenuModule, NbIconModule, NbInputModule,
   NbLayoutModule,
   NbMenuModule,
   NbSidebarModule,
   NbThemeModule,
-  NbThemeService,
+  NbThemeService, NbUserModule,
 } from '@nebular/theme';
 import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -30,17 +31,20 @@ import {ReactiveFormsModule} from "@angular/forms";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes, {initialNavigation: 'enabledBlocking'}),
-    NbThemeModule.forRoot(),
+    NbThemeModule.forRoot({name: 'ekaizen'}),
+    NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),
+    NbContextMenuModule,
     NbLayoutModule,
     NbButtonModule,
-    NbSidebarModule,
     NbCardModule,
     NbActionsModule,
     NbIconModule,
     NbInputModule,
     ReactiveFormsModule,
+    NbUserModule,
   ],
   providers: [NbThemeService],
   bootstrap: [AppComponent],

@@ -1,0 +1,220 @@
+@forward '@nebular/theme/styles/theming';
+@use '@nebular/theme/styles/theming' as *;
+@use '@nebular/theme/styles/themes/corporate';
+@import "helpers";
+
+$base-colors: (
+  color-primary-100: #fbd7d0,
+  color-primary-200: #f7a9a3,
+  color-primary-300: #e87276,
+  color-primary-400: #d14c5e,
+  color-primary-500: #b31c3e,
+  color-primary-600: #99143f,
+  color-primary-700: #800e3d,
+  color-primary-800: #670839,
+  color-primary-900: #550536,
+  color-primary-transparent-100: rgba(179, 28, 62, 0.08),
+  color-primary-transparent-200: rgba(179, 28, 62, 0.16),
+  color-primary-transparent-300: rgba(179, 28, 62, 0.24),
+  color-primary-transparent-400: rgba(179, 28, 62, 0.32),
+  color-primary-transparent-500: rgba(179, 28, 62, 0.4),
+  color-primary-transparent-600: rgba(179, 28, 62, 0.48),
+  color-success-100: #caf8cf,
+  color-success-200: #98f2ab,
+  color-success-300: #60d985,
+  color-success-400: #36b46a,
+  color-success-500: #098247,
+  color-success-600: #066f47,
+  color-success-700: #045d43,
+  color-success-800: #024b3d,
+  color-success-900: #013e39,
+  color-success-transparent-100: rgba(9, 130, 71, 0.08),
+  color-success-transparent-200: rgba(9, 130, 71, 0.16),
+  color-success-transparent-300: rgba(9, 130, 71, 0.24),
+  color-success-transparent-400: rgba(9, 130, 71, 0.32),
+  color-success-transparent-500: rgba(9, 130, 71, 0.4),
+  color-success-transparent-600: rgba(9, 130, 71, 0.48),
+  color-info-100: #c8faeb,
+  color-info-200: #94f6e1,
+  color-info-300: #5ce6d3,
+  color-info-400: #33cdc6,
+  color-info-500: #00a7ad,
+  color-info-600: #008394,
+  color-info-700: #00637c,
+  color-info-800: #004764,
+  color-info-900: #003453,
+  color-info-transparent-100: rgba(0, 167, 173, 0.08),
+  color-info-transparent-200: rgba(0, 167, 173, 0.16),
+  color-info-transparent-300: rgba(0, 167, 173, 0.24),
+  color-info-transparent-400: rgba(0, 167, 173, 0.32),
+  color-info-transparent-500: rgba(0, 167, 173, 0.4),
+  color-info-transparent-600: rgba(0, 167, 173, 0.48),
+  color-warning-100: #fef6cb,
+  color-warning-200: #fdec98,
+  color-warning-300: #fbdc64,
+  color-warning-400: #f7cd3d,
+  color-warning-500: #f2b500,
+  color-warning-600: #d09600,
+  color-warning-700: #ae7900,
+  color-warning-800: #8c5d00,
+  color-warning-900: #744a00,
+  color-warning-transparent-100: rgba(242, 181, 0, 0.08),
+  color-warning-transparent-200: rgba(242, 181, 0, 0.16),
+  color-warning-transparent-300: rgba(242, 181, 0, 0.24),
+  color-warning-transparent-400: rgba(242, 181, 0, 0.32),
+  color-warning-transparent-500: rgba(242, 181, 0, 0.4),
+  color-warning-transparent-600: rgba(242, 181, 0, 0.48),
+  color-danger-100: #fbd9d1,
+  color-danger-200: #f8aca5,
+  color-danger-300: #ec7576,
+  color-danger-400: #d9505e,
+  color-danger-500: #c11f3f,
+  color-danger-600: #a51640,
+  color-danger-700: #8a0f3f,
+  color-danger-800: #6f093b,
+  color-danger-900: #5c0538,
+  color-danger-transparent-100: rgba(193, 31, 63, 0.08),
+  color-danger-transparent-200: rgba(193, 31, 63, 0.16),
+  color-danger-transparent-300: rgba(193, 31, 63, 0.24),
+  color-danger-transparent-400: rgba(193, 31, 63, 0.32),
+  color-danger-transparent-500: rgba(193, 31, 63, 0.4),
+  color-danger-transparent-600: rgba(193, 31, 63, 0.48),
+  color-basic-100: white,
+  color-basic-200: #f8f8f8,
+  color-basic-300: #edeeee,
+  color-basic-400: #e1e2e2,
+  color-basic-500: #c4afaf,
+  color-basic-600: #bb9696,
+  color-basic-700: #9b6c6a,
+  color-basic-800: #704943,
+  color-basic-900: #64473f,
+  color-basic-1000: #422b2b,
+  color-basic-1100: #272626,
+  background-basic-color-1: color-basic-100,
+  background-basic-color-2: color-basic-300,
+  background-basic-color-3: color-basic-500,
+  background-basic-color-4: color-basic-700,
+);
+
+$layout: (
+  //layout-padding: 0.6rem 2.25rem 0.75rem,
+  //layout-medium-padding: 1rem 1.5rem 0.5rem,
+);
+
+$sidebar: (
+  sidebar-text-color: #fff,
+  sidebar-background-color: darken(#605e5fff, 15%),
+  sidebar-scrollbar-width: 0.4rem,
+  sidebar-scrollbar-color: darken(#605e5fff, 5%),
+  menu-item-icon-margin: 0.5rem 0.5rem 0 0,
+);
+
+$menu: (
+   //Divider variable
+  menu-item-divider-width: 0.3px,
+   //Menu Item variables
+  menu-item-icon-width: 1rem,
+  //menu-item-padding: 0.75rem,
+  menu-item-icon-color: #ffffff,
+  menu-item-active-text-color: #ffffff,
+  menu-item-active-background-color: color-primary-700,
+   //Menu item on hover variables
+  menu-item-hover-background-color: color-primary-700,
+  menu-item-hover-border-color: color-primary-600,
+  menu-item-hover-text-color: #ffffff,
+  menu-item-icon-hover-color: #ffffff,
+   //Submenu variables
+  menu-submenu-background-color: darken(#605e5fff, 5%),
+  menu-submenu-padding: 0 0 0 1.25rem,
+   //Submenu Item variables
+  menu-submenu-item-padding: 0.45rem,
+  menu-submenu-item-active-background-color: color-primary-600,
+  menu-submenu-item-active-hover-background-color: color-primary-600,
+  menu-submenu-item-hover-background-color: color-primary-600,
+  menu-submenu-item-hover-border-color: #ffffff,
+  menu-submenu-item-hover-text-color: #ffffff,
+  menu-submenu-item-icon-hover-color: #ffffff,
+   //Menu variables
+  menu-group-text-color: #ffffff,
+  menu-text-color: #ffffff
+);
+
+$tabset: (
+  tabset-divider-color: #b1b1b1,
+  tabset-tab-active-underline-color: color-primary-500,
+);
+
+$text: (
+  text-basic-color: #3a3a3a,
+  text-hint-color: #3a3a3a,
+  text-heading-4-font-size: 1.2em,
+);
+
+$font: (
+  font-family-primary: 'Montserrat',
+  font-family-secondary: 'Montserrat',
+);
+
+$actions: (
+  actions-small-padding: 0,
+);
+
+$scrollbar: (
+  scrollbar-width: 8px,
+  scrollbar-color: #b1b1b1,
+);
+
+$stepper: (
+  stepper-step-index-completed-text-color: #383838,
+  stepper-step-index-completed-background-color: white,
+);
+
+$tree: (
+  tree-grid-footer-text-color: #3a3a3a,
+);
+
+$header: (
+  header-background-color: lighten(rgb(177, 177, 177), 35%),
+  header-height: 3.5rem,
+  //header-padding: 0,
+  header-shadow: 0 0.5rem 1rem 0 rgba(127, 127, 127, 0.5)
+);
+
+$background: (
+  background-basic-color-3: rgba(214, 210, 210, 0.219),
+);
+
+$tooltip: (
+  tooltip-background-color: darken(#605e5fff, 15%),
+);
+
+$timepicker: (
+  timepicker-container-height: 20rem,
+);
+
+$popover: (
+  popover-border-color: #e1e2e2,
+);
+
+$nb-themes: nb-register-theme(
+    map-collect(
+        $base-colors,
+        $layout,
+        $sidebar,
+        $menu,
+        $tabset,
+        $text,
+        $font,
+        $actions,
+        $scrollbar,
+        $stepper,
+        $tree,
+        $header,
+        $background,
+        $tooltip,
+        $timepicker,
+        $popover
+    ),
+    ekaizen,
+    default
+);

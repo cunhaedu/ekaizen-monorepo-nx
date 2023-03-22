@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ek-frontend/auth": ["libs/auth/src/index.ts"]
+      "@ek-frontend/auth": ["libs/auth/src/index.ts"],
+      "@ek-frontend/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
