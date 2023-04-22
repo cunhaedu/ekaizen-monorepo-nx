@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ghc-root',
+  selector: 'ek-ghc-root',
   template: '<router-outlet></router-outlet>',
 })
 export class AppComponent {}

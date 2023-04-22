@@ -7,6 +7,8 @@ import {
   ElementRef,
   ViewEncapsulation
 } from '@angular/core';
+import {Simulate} from "react-dom/test-utils";
+import load = Simulate.load;
 
 @Component({
   selector: '[ek-button]',
@@ -21,12 +23,13 @@ import {
     '[class.size-md]': 'size === "md"',
     '[class.size-lg]': 'size === "lg"',
     '[class.full]': '!!full',
+    '[class.loading]': '!!loading',
   }
 })
 export class EkaizenButtonComponent implements OnInit, OnDestroy {
   @Input() variant: 'primary' | 'secondary' | 'tertiary' = 'primary';
 
-  @Input() size: 'sm' | 'md' | 'xs' = 'md';
+  @Input() size: 'sm' | 'md' | 'lg' = 'md';
 
   @Input() full = false;
 
@@ -44,4 +47,7 @@ export class EkaizenButtonComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this._focusMonitor.stopMonitoring(this._elementRef);
   }
+
+  protected readonly Simulate = Simulate;
+  protected readonly load = load;
 }

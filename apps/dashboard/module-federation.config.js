@@ -1,4 +1,4 @@
 module.exports = {
   name: 'dashboard',
-  remotes: ['doctec', 'ghc', 'pdi'],
+  remotes: ['doctec', 'ghc'],
 };

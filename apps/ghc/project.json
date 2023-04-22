@@ -3,12 +3,9 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "apps/ghc/src",
-  "prefix": "ghc",
+  "prefix": "ek-ghc",
   "targets": {
     "build": {
-      "stylePreprocessorOptions": {
-        "includePaths": ["libs/ui/src/lib/styles"]
-      },
       "executor": "@nrwl/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
@@ -115,5 +112,5 @@
       }
     }
   },
-  "tags": []
+  "tags": ["scope:ephs"]
 }

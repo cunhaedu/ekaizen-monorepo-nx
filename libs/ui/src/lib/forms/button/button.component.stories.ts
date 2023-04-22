@@ -22,7 +22,7 @@ export default {
       control: {
         defaultValue: 'primary',
         type: 'inline-radio',
-        options: ['primary', 'secondary']
+        options: ['primary', 'secondary', 'tertiary']
       },
     },
     size: {

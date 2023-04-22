@@ -9,7 +9,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "ghc",
+            "prefix": "ekGhc",
             "style": "camelCase"
           }
         ],
@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "ghc",
+            "prefix": "ek-ghc",
             "style": "kebab-case"
           }
         ]

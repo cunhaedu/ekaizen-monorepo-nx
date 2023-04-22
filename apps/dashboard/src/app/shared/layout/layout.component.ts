@@ -36,11 +36,6 @@ export class LayoutComponent implements OnInit, OnDestroy {
       icon: { icon: "user-cog", pack: "fas" },
       link: 'ghc'
     },
-    {
-      title: 'PDI',
-      icon: { icon: "clipboard", pack: "fas" },
-      link: 'pdi'
-    },
   ];
 
   headerContextMenuItems: NbMenuItem[] = [

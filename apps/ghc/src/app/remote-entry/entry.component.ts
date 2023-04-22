@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ghc-entry',
-  template: `<ghc-nx-welcome></ghc-nx-welcome>`,
+  selector: 'ek-ghc-ghc-entry',
+  template: `<ek-ghc-nx-welcome></ek-ghc-nx-welcome>`,
 })
 export class RemoteEntryComponent {}
