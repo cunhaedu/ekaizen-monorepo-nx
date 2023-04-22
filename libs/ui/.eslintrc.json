@@ -9,18 +9,19 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "ekFrontend",
+            "prefix": "ek",
             "style": "camelCase"
           }
         ],
         "@angular-eslint/component-selector": [
           "error",
           {
-            "type": "element",
-            "prefix": "ek-frontend",
+            "type": ["element", "attribute"],
+            "prefix": ["ek-frontend", "ek"],
             "style": "kebab-case"
           }
-        ]
+        ],
+        "@angular-eslint/no-host-metadata-property": "off"
       },
       "extends": [
         "plugin:@nrwl/nx/angular",

@@ -4,7 +4,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
   selector: 'doctec-nx-welcome',
   template: `
     <div>
-      <h1>Bem vindo ao Doctec!</h1>
+      <button ek-button variant="secondary">Button</button>
     </div>
   `,
   styles: [],

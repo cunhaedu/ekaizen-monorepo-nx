@@ -7,7 +7,7 @@
   "targets": {
     "build": {
       "stylePreprocessorOptions": {
-        "includePaths": [ "libs/ui/src/lib/styles" ]
+        "includePaths": ["libs/ui/src/lib/styles"]
       },
       "executor": "@nrwl/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],

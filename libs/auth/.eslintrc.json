@@ -3,6 +3,7 @@
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
+
       "files": ["*.ts"],
       "rules": {
         "@angular-eslint/directive-selector": [

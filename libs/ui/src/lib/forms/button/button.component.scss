@@ -1,0 +1,87 @@
+:host {
+  @apply border-0;
+  @apply cursor-pointer;
+  @apply font-semibold;
+  @apply rounded-md;
+
+  &.full {
+    @apply min-w-full;
+  }
+
+  &.size-sm {
+    @apply text-xs;
+    @apply px-4;
+    @apply py-2;
+  }
+
+  &.size-md {
+    @apply text-sm;
+    @apply px-6;
+    @apply py-3;
+  }
+
+  &.size-lg {
+    @apply text-sm;
+    @apply px-8;
+    @apply py-4;
+  }
+
+  &.primary {
+    @apply bg-ekaizen-primary;
+    @apply text-white;
+
+    &:hover {
+      @apply bg-ekaizen-800;
+    }
+
+    &.cdk-keyboard-focused {
+      @apply outline;
+      @apply outline-2;
+      @apply outline-offset-2;
+      @apply outline-ekaizen-primary;
+    }
+  }
+
+  &.secondary {
+    @apply bg-white;
+    @apply text-gray-900;
+    @apply ring-2 ring-inset ring-gray-300 ring-offset-0 ring-offset-white;
+
+    &:hover {
+      @apply bg-gray-50;
+    }
+
+    &.cdk-keyboard-focused {
+      @apply outline;
+      @apply outline-2;
+      @apply outline-offset-2;
+      @apply outline-gray-300;
+    }
+  }
+
+  &.tertiary {
+    @apply bg-white;
+    @apply text-gray-900;
+
+    &:hover {
+      @apply bg-gray-50;
+    }
+
+    &.cdk-keyboard-focused {
+      @apply outline;
+      @apply outline-2;
+      @apply outline-offset-2;
+      @apply outline-gray-300;
+    }
+  }
+
+  &:focus {
+    @apply outline-0;
+  }
+
+  &:disabled {
+    @apply opacity-70;
+    @apply cursor-not-allowed;
+    @apply pointer-events-none;
+  }
+}
