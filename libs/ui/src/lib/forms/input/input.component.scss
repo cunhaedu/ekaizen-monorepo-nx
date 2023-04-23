@@ -1,0 +1,20 @@
+:host {
+  @apply font-normal;
+  @apply bg-transparent;
+  @apply border-0;
+  @apply w-full;
+  @apply text-sm;
+  @apply text-gray-900;
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  &:disabled {
+    @apply cursor-not-allowed;
+  }
+
+  &::placeholder {
+    @apply text-gray-500;
+  }
+}

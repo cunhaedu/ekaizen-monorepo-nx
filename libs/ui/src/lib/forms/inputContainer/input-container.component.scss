@@ -1,0 +1,35 @@
+:host {
+  @apply bg-white;
+  @apply py-3;
+  @apply px-4;
+  @apply rounded-md;
+  @apply box-border;
+  @apply flex;
+  @apply items-baseline;
+  @apply shadow-sm;
+  @apply ring-1 ring-inset ring-gray-500 ring-offset-0 ring-offset-white;
+
+  &:has(input:focus) {
+    @apply ring-2;
+  }
+
+  &:has(input:disabled) {
+    @apply opacity-50;
+    @apply cursor-not-allowed;
+  }
+
+  & > span.input-container-prefix, span.input-container-suffix {
+    @apply text-sm;
+    @apply font-medium;
+    @apply text-gray-600;
+    @apply select-none;
+  }
+
+  & > span.input-container-prefix {
+    @apply pr-1;
+  }
+
+  & > span.input-container-suffix {
+    @apply pl-1;
+  }
+}

@@ -4,7 +4,7 @@ const config: StorybookConfig = {
   core: { builder: 'webpack5' },
   stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    '@storybook/addon-a11y',
+    // '@storybook/addon-a11y', TODO: Not Working
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',

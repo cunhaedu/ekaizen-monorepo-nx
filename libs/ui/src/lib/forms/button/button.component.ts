@@ -7,8 +7,6 @@ import {
   ElementRef,
   ViewEncapsulation
 } from '@angular/core';
-import {Simulate} from "react-dom/test-utils";
-import load = Simulate.load;
 
 @Component({
   selector: '[ek-button]',
@@ -47,7 +45,4 @@ export class EkaizenButtonComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this._focusMonitor.stopMonitoring(this._elementRef);
   }
-
-  protected readonly Simulate = Simulate;
-  protected readonly load = load;
 }
