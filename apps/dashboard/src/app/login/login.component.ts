@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "@ek-frontend/auth";
 import {Router} from "@angular/router";
 
@@ -18,9 +18,9 @@ export class LoginComponent {
     private router: Router
   ) {
     this.formLogin = this.fb.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required]
-    })
+      username: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required]),
+    });
   }
 
   login(formLogin: FormGroup) {

@@ -2,6 +2,7 @@ import {Meta, Story} from '@storybook/angular';
 import {EkaizenInputContainerComponent} from "./input-container.component";
 import {EkaizenInputContainerModule} from "./input-container.module";
 import {EkaizenInputModule} from "../input/input.module";
+import {FormsModule} from "@angular/forms";
 
 export default {
   title: 'Form/Input',
@@ -15,6 +16,8 @@ export default {
     suffix: '',
     disabled: false,
     type: 'text',
+    value: '',
+    required: false,
   },
   argTypes: {
     placeholder: {
@@ -38,12 +41,17 @@ export default {
         disable: true,
       },
     },
+    value: {
+      table: {
+        disable: true,
+      },
+    }
   },
 } as Meta<EkaizenInputContainerComponent>;
 
 const Template: Story<EkaizenInputContainerComponent> = args => ({
   moduleMetadata: {
-    imports: [EkaizenInputContainerModule, EkaizenInputModule]
+    imports: [EkaizenInputContainerModule, EkaizenInputModule, FormsModule]
   },
   template: `
     <div ek-input-container [prefix]="prefix" [suffix]="suffix">
@@ -52,7 +60,9 @@ const Template: Story<EkaizenInputContainerComponent> = args => ({
         [placeholder]="placeholder"
         [disabled]="disabled"
         [type]="type"
-       />
+        [(ngModel)]="value"
+        [required]="required"
+      />
     </div>
   `,
   props: {
@@ -81,4 +91,10 @@ WithSuffix.args = {
   suffix: 'KG',
   type: 'number',
   placeholder: '0.00',
+} as EkaizenInputContainerComponent;
+
+export const WithError = Template.bind({});
+
+WithError.args = {
+  required: true,
 } as EkaizenInputContainerComponent;

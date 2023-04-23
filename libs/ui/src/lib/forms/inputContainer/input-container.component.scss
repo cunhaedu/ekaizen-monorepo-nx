@@ -32,4 +32,12 @@
   & > span.input-container-suffix {
     @apply pl-1;
   }
+
+  &:has(input.ng-invalid) {
+    @apply ring-ekaizen-primary;
+
+    & > span.input-container-prefix, span.input-container-suffix {
+      @apply text-ekaizen-primary;
+    }
+  }
 }

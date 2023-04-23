@@ -10,12 +10,12 @@
       <nb-card-body [formGroup]="formLogin">
         <div>
           <p>Usuário</p>
-          <input formControlName="username" nbInput fullWidth type="text">
+          <input formControlName="username" nbInput fullWidth type="email">
           <p>Senha</p>
           <input formControlName="password" nbInput fullWidth type="password">
         </div>
         <div>
-          <button (click)="login(formLogin)" nbButton fullWidth status="danger">Login</button>
+          <button (click)="login(formLogin)" [disabled]="formLogin.invalid" nbButton fullWidth status="danger">Login</button>
         </div>
       </nb-card-body>
     </nb-card>
